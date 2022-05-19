@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <title>RocketCoffee</title>
+</head>
+<body>
+    <img class="blur-1" src="./assets/blur-1.png">
+    <img class="blur-2" src="./assets/blur-2.png">
+    <header class="header-coffee">
+        <img src="./assets/logo-desktop.svg" alt="logo-desktop">
+        <nav>
+            <ul class="menu" type="none">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html">Menu</a></li>
+                <li><a href="./index.html">Recompensas</a></li>
+                <li><a href="./index.html">Gift Cards</a></li>
+                <li><a href="./index.html">Lojas</a></li>
+            </ul>
+        </nav>
+        <img class="icon" onclick="menuClick()" src="./assets/icon-menu.svg">
+        <button>Pegar meu café</button>
+    </header>
+    <h1>Great Coffee <span>&#60;Great Code/&#62;</span>  </h1>
+    <img class="img-coffee" src="./assets/rocket-coffee.png" alt="Rocket Coffee">
+
+    <script>
+        function menuClick() {
+            var headerResponsive = document.getElementsByTagName("header")[0];
+            if (headerResponsive.className === "header-coffee") {
+                headerResponsive.className += " responsive";
+            } else {
+                headerResponsive.className = "header-coffee";
+            }
+
+        }
+    </script>
+
+</body>
+</html>
