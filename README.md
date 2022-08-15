@@ -1,2 +1,2 @@
-# web-projects
-Web projects
+# Basic Project
+basic responsive project
