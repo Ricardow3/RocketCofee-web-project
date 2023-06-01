@@ -11,24 +11,51 @@
     <title>RocketCoffee</title>
 </head>
 <body>
-    <img class="blur-1" src="./assets/blur-1.png">
-    <img class="blur-2" src="./assets/blur-2.png">
-    <header class="header-coffee">
+    <section class="desktop">
+        <img class="blur-1" src="./assets/blur-1.png">
+        <img class="blur-2" src="./assets/blur-2.png">
+        <header class="header-coffee">
         <img src="./assets/logo-desktop.svg" alt="logo-desktop">
-        <nav>
-            <ul class="menu" type="none">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./index.html">Menu</a></li>
-                <li><a href="./index.html">Recompensas</a></li>
-                <li><a href="./index.html">Gift Cards</a></li>
-                <li><a href="./index.html">Lojas</a></li>
+            <nav>
+                <ul class="menu" type="none">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html">Menu</a></li>
+                    <li><a href="./index.html">Recompensas</a></li>
+                    <li><a href="./index.html">Gift Cards</a></li>
+                    <li><a href="./index.html">Lojas</a></li>
+                </ul>
+            </nav>
+            <img class="icon" onclick="menuClick()" src="./assets/icon-menu.svg">
+            <button>Pegar meu café</button>
+        </header>
+        <h1>Great Coffee <span>&#60;Great Code/&#62;</span>  </h1>
+        <img class="img-coffee" src="./assets/rocket-coffee.png" alt="Rocket Coffee">
+    </section>
+    
+
+    <section class="mobile">
+        <img class="blur-mobile" src="./assets/blur-mobile.png">
+        <header class="header-coffee-mobile">
+            <img src="./assets/logo-mobile.svg" alt="logo-mobile">
+            <img class="menu-open" onclick="menuClickMobile()" src="./assets/menu-buguer-open.svg" alt="menu-mobile-open">
+            <img class="menu-close" onclick="menuClickMobile()" src="./assets/menu-buguer-close.svg" alt="menu-mobile-close">
+        </header>
+        <nav class="nav-mobile">
+            <ul class="menu-mobile" type="none">
+                <a href="./index.html"><li>Home</li></a>
+                <a href="./index.html"><li>Menu</li></a>
+                <a href="./index.html"><li>Recompensas</li></a>
+                <a href="./index.html"><li>Gift Cards</li></a>
+                <a href="./index.html"><li>Lojas</li></a>
             </ul>
         </nav>
-        <img class="icon" onclick="menuClick()" src="./assets/icon-menu.svg">
-        <button>Pegar meu café</button>
-    </header>
-    <h1>Great Coffee <span>&#60;Great Code/&#62;</span>  </h1>
-    <img class="img-coffee" src="./assets/rocket-coffee.png" alt="Rocket Coffee">
+        <div class="body-mobile">
+            <p>O café que fará seu código decolar para o próximo nível.</p>
+            <button class="button-mobile">Pegar meu café <img src="./assets/arrow.svg"> </button>
+            <h1>Great Coffee <br> <span>&#60;Great Code/&#62;</span></h1>
+            <img class="img-coffee-mobile" src="./assets/rocket-coffee.png" alt="Rocket Coffee Mobile"> 
+        </div>      
+    </section>
 
     <script>
         function menuClick() {
@@ -39,6 +66,14 @@
                 headerResponsive.className = "header-coffee";
             }
 
+        }
+        function menuClickMobile() {
+            var mobileResponsive = document.getElementsByClassName("mobile")[0];
+            if (mobileResponsive.className === "mobile") {
+                mobileResponsive.className += " responsive";
+            } else {
+                mobileResponsive.className = "mobile";
+            }
         }
     </script>
 
